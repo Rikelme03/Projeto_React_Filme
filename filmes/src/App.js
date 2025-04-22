@@ -1,25 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Login from './pages/login/Login';
+import CadastroFilme from './pages/cadstroFilme/CadastroFilme';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Login/> */}
+      <CadastroFilme/>
+    </>
   );
 }
-
+// Ele libera a funcao para que ela seja usada em qualquer parte do codigo
 export default App;
