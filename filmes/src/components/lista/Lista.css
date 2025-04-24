@@ -1,0 +1,45 @@
+.listagem{
+    
+    min-height: calc(100vh - (76px + 241px + 33px));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.listagem h1{
+    text-transform: uppercase;
+}
+
+.listagem hr{
+    max-width: 300px;
+    width: 100%;
+    margin-top: 5px;
+    border-style: solid;
+    border-top-width: 1px;
+    border-color: #730618;
+    margin-top: 5px;
+}
+
+.item_lista img{
+    height: 28px;
+    
+}
+
+.tabela{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.cabecalho :first-child{
+    width: 300px;
+}
+
+.cabecalho :nth-child(2){
+    width: 200px;
+}
+
+.cabecalho th{
+    width: 100px;
+    
+}
