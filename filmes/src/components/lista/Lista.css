@@ -21,25 +21,30 @@
     margin-top: 5px;
 }
 
+
+
 .item_lista img{
     height: 28px;
     
 }
 
-.tabela{
+.tabela table{
     width: 100%;
     margin-top: 30px;
 }
 
-.cabecalho :first-child{
+.tabela .cabecalho :first-child{
     width: 300px;
 }
 
-.cabecalho :nth-child(2){
+.tabela .cabecalho :nth-child(2){
     width: 200px;
 }
 
 .cabecalho th{
     width: 100px;
-    
+}
+
+.item_lista td{
+    padding: 20px 0 5px 0;
 }
