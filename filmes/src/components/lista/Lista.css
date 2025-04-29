@@ -33,15 +33,15 @@
     margin-top: 30px;
 }
 
-.tabela .cabecalho :first-child{
+.table_cabecalho :first-child{
     width: 300px;
 }
 
-.tabela .cabecalho :nth-child(2){
+.table_cabecalho :nth-child(2){
     width: 200px;
 }
 
-.cabecalho th{
+.table_cabecalho th{
     width: 100px;
 }
 

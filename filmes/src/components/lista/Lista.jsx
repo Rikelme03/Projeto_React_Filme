@@ -11,7 +11,7 @@ const Lista = () => {
             <div className="tabela">
                 <table>
                     <thead>
-                        <tr className="cabecalho">
+                        <tr className="table_cabecalho">
                             <th>Nome</th>
                             <th>Gênero</th>
                             <th>Editar</th>
