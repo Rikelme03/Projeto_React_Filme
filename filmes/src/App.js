@@ -1,14 +1,11 @@
-import './App.css';
-// import Login from './pages/login/Login';
-import CadastroFilme from './pages/cadastroFilme/CadastroFilme.jsx';
-
+import './App.css'
+import Rotas from './Routes/routes';
 
 function App() {
   return (
-    <>
-      {/* <Login/> */}
-      <CadastroFilme/>
-    </>
+ 
+      <Rotas/>
+
   );
 }
 // Ele libera a funcao para que ela seja usada em qualquer parte do codigo

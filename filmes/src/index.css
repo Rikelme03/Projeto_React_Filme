@@ -1,13 +1,13 @@
 /* Vamos colocar estilos padroes ! */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-    font-family: "Montserrat", sans-serif;
-  }
-  
-.layout_grid{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.layout_grid {
   width: 100%;
   height: 100%;
   max-width: 80%;

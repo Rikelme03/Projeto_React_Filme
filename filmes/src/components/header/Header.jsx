@@ -1,5 +1,6 @@
 import "./Header.css"
 import Logo from "../../assets/img/logo.svg"
+import { Link } from "react-router-dom"
 
 const Header = () => {
     return(
@@ -7,11 +8,12 @@ const Header = () => {
         <header>
 
             <div className="layout_grid cabecalho">
+            <Link to="/">
             <img src={Logo} alt="Logo do Filmoteca" />
-            
+            </Link>
             <nav className="nav_header">
-                <a className="link_header"  href="">Filme</a>
-                <a className="link_header"  href="">Genero</a>
+                <Link className="link_header" to="/Filme" href="">Filme</Link>
+                <Link className="link_header"  to="/Genero" href="">Gênero</Link>
             </nav>
             </div>
         </header>
