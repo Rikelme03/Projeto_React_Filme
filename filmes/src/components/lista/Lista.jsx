@@ -18,11 +18,21 @@ const Lista = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr className="item_lista">
-                            <td data-cell ="Nome">Velozes e Furiosos</td>
-                            <td data-cell ="Editar"><img src={Editar} alt="Imagem de uma caneta" /></td>
-                            <td data-cell ="Excluir"><img src={Excluir} alt="Lixeira" /></td>
-                        </tr>
+                        {   props.lista && props.lista.length > 0 ?(
+                            props.lista.map((item) => (
+                            <tr className="item_lista" Key={item.IdGenero}>
+                            <td data-cell ="Nome">
+                                {item.nome}
+                            </td>
+                            <td data-cell ="Editar" ><img src={Editar} alt="Imagem de uma caneta" /></td>
+                            <td data-cell ="Excluir"><img src={Excluir} alt="Lixeira" onClick={() => props.deletar(item.idGenero)}/></td>
+                            </tr>    
+                            ))
+                            )
+                            :(
+                                <p>Nenhum genero encontrado</p>
+                            )
+                        }
                     </tbody>
                 </table>
             </div>
