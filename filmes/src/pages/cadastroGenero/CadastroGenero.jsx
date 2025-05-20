@@ -13,10 +13,7 @@ const CadastroGenero = () => {
     // que muda e que o React precisa acompanhar
 
     const [genero, setGenero] = useState("");
-
     const [listaGenero, setListaGenero] = useState([]);
-
-
 
      function alertar(icone, mensagem) {
         const Toast = Swal.mixin({
@@ -77,7 +74,7 @@ const CadastroGenero = () => {
                     console.log("I was closed by the timer");
                 }
                 });
-                //============ alertar =======================
+            //============ alertar =======================
 
             setGenero("");
             listarGenero();
@@ -147,6 +144,33 @@ const CadastroGenero = () => {
         }
     }
 
+    async function editarGenero(genero){
+
+        const { value: novoGenero } = await Swal.fire({
+        title: "Edite seu genero",
+        input: "text",
+        inputLabel: "Novo Genero",
+        inputValue:  genero.nome,
+        showCancelButton: true,
+        inputValidator: (value) => {
+            if (!value) {
+                
+            return "O campo nao pode estar vazio";
+            }
+        }
+        });
+        if (novoGenero) {
+                try {
+                    // console.log(genero.nome);
+                    // console.log(novoGenero);
+                    await api.put(`genero/${genero.idGenero}`,{nome: novoGenero});
+                    Swal.fire(`O genero foi modificado para ${novoGenero}`);
+                } catch (error) {
+                    console.log(error);     
+                }
+        }
+    };
+
     //Criando a paginacao
 
     //Teste:Validar a mudanca do genero
@@ -160,7 +184,7 @@ const CadastroGenero = () => {
     useEffect(() => {
         listarGenero();
         
-    }, [listarGenero]);
+    }, [listaGenero]);
 
     return (
         <>
@@ -182,6 +206,8 @@ const CadastroGenero = () => {
                     visibilidadeGenero="none"
                     lista={listaGenero}
                     deletar={deletaGenero}
+                    funEditar={editarGenero}
+                    listagemGenFil="Nao a nenhum genero cadastrado :("
                  />
             </main>
             <Footer />

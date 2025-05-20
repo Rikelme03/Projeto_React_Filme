@@ -101,4 +101,8 @@ tbody p{
 
 }
 
+td button{
+    border: none;
+    background-color: transparent;
+}
 

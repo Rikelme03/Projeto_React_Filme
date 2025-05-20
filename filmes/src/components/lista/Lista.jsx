@@ -24,13 +24,17 @@ const Lista = (props) => {
                             <td data-cell ="Nome">
                                 {item.nome}
                             </td>
-                            <td data-cell ="Editar" ><img src={Editar} alt="Imagem de uma caneta" /></td>
+                            <td data-cell ="Editar" >
+                                <button onClick={()=> {props.funEditar(item)}}>
+                                    <img src={Editar} alt="Imagem de uma caneta" />
+                                    </button>
+                                </td>
                             <td data-cell ="Excluir"><img src={Excluir} alt="Lixeira" onClick={() => props.deletar(item.idGenero)}/></td>
                             </tr>    
                             ))
                             )
                             :(
-                                <p>Nenhum genero encontrado</p>
+                                <p>{props.listagemGenFil}</p>
                             )
                         }
                     </tbody>
